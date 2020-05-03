@@ -1,0 +1,20 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <authgroups>
+  <group>
+    <name>ftd</name>
+    <default-map>
+      <remote-name>admin</remote-name>
+      <remote-password>C!sco123</remote-password>
+    </default-map>
+  </group>
+  <group>
+    <name>ftd_day0</name>
+    <default-map>
+      <remote-name>admin</remote-name>
+      <remote-password>Admin123</remote-password>
+    </default-map>
+  </group>
+  </authgroups>
+  </devices>
+</config>

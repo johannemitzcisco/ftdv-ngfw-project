@@ -1,0 +1,34 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <device>
+    <name>fmc-virtual</name>
+    <address>172.26.32.219</address>
+    <port>443</port>
+    <authgroup>fmc-virtual</authgroup>
+    <device-type>
+      <generic>
+        <ned-id xmlns:cisco-fmc-gen-1.3="http://tail-f.com/ns/ned-id/cisco-fmc-gen-1.3">cisco-fmc-gen-1.3:cisco-fmc-gen-1.3</ned-id>
+      </generic>
+    </device-type>
+    <read-timeout>600</read-timeout>
+    <write-timeout>600</write-timeout>
+    <trace>raw</trace>
+    <ned-settings>
+      <cisco-fmc xmlns="http://tailf.com/ned/cisco-fmc/meta">
+        <log-verbose>true</log-verbose>
+        <cisco-fmc-connection>
+          <ssl>
+            <accept-any>true</accept-any>
+          </ssl>
+        </cisco-fmc-connection>
+        <cisco-fmc-settings>
+          <async-task-timeout>600</async-task-timeout>
+        </cisco-fmc-settings>
+      </cisco-fmc>
+    </ned-settings>
+    <state>
+      <admin-state>unlocked</admin-state>
+    </state>
+  </device>
+  </devices>
+</config>

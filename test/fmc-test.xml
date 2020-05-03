@@ -1,0 +1,70 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <vnf-manager xmlns="http://example.com/ftdv-ngfw">
+  <site>
+    <name>bofa-ngfw</name>
+      <vnf-deployment>
+        <tenant>admin</tenant>
+        <deployment-name>FMC-FTD-SMALL-DEPLOYMENT</deployment-name>
+        <catalog-vnf>Cisco-FTD-Small-SmallDeployment</catalog-vnf>
+        <manager>
+          <name>fmc-virtual</name>
+        </manager>
+        <scaling>
+          <threshold>
+            <scale-up>13000</scale-up>
+            <scale-down>9000</scale-down>
+          </threshold>
+          <networks>
+            <network>
+              <name>Inside</name>
+              <resource-pool-allocation>
+                <name refcounter="1" >admin_FMC-FTD-SMALL-DEPLOYMENT_Inside</name>
+              </resource-pool-allocation>
+              <ftd-interface>
+                <inside/>
+              </ftd-interface>
+              <ftd-route-network>Inside-Servers</ftd-route-network>
+            </network>
+            <network>
+              <name>Management</name>
+              <resource-pool-allocation>
+                <name refcounter="1" >admin_FMC-FTD-SMALL-DEPLOYMENT_Management</name>
+              </resource-pool-allocation>
+            </network>
+            <network>
+              <name>Outside</name>
+              <resource-pool-allocation>
+                <name refcounter="1" >admin_FMC-FTD-SMALL-DEPLOYMENT_Outside</name>
+              </resource-pool-allocation>
+              <ftd-interface>
+                <outside/>
+              </ftd-interface>
+              <ftd-route-network>Outside-Clients</ftd-route-network>
+            </network>
+          </networks>
+          <load-balance>
+            <cisco-intelligent-traffic-director xmlns="http://com/example/intelligenttrafficdirector">
+              <sides>
+                <side>inside</side>
+                <site-network>Inside</site-network>
+                <ingress-interface>Vlan230</ingress-interface>
+                <virtual-ip>172.16.2.220</virtual-ip>
+                <virtual-ip-mask>255.255.255.0</virtual-ip-mask>
+                <buckets>4</buckets>
+              </sides>
+              <sides>
+                <side>outside</side>
+                <site-network>Outside</site-network>
+                <ingress-interface>Vlan200</ingress-interface>
+                <virtual-ip>172.161.1.220</virtual-ip>
+                <virtual-ip-mask>255.255.255.0</virtual-ip-mask>
+                <buckets>4</buckets>
+              </sides>
+            </cisco-intelligent-traffic-director>
+          </load-balance>
+        </scaling>
+        <status refcounter="1" >Deploying</status>
+      </vnf-deployment>
+  </site>
+  </vnf-manager>
+</config>

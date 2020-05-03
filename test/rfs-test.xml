@@ -1,0 +1,47 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <vnf-manager xmlns="http://example.com/ftdv-ngfw">
+  <site>
+    <name>bofa-ngfw</name>
+      <vnf-deployment>
+        <tenant>admin</tenant>
+        <deployment-name>TEST1</deployment-name>
+        <catalog-vnf>Cisco-FTD-Small-FullDeployment</catalog-vnf>
+        <scaling>
+          <threshold>
+            <scale-up>2</scale-up>
+            <scale-down>2</scale-down>
+          </threshold>
+          <networks>
+            <network>
+              <name>Inside</name>
+            </network>
+            <network>
+              <name>Management</name>
+            </network>
+            <network>
+              <name>Outside</name>
+            </network>
+          </networks>
+          <load-balance>
+            <cisco-intelligent-traffic-director xmlns="http://com/example/intelligenttrafficdirector">
+              <sides>
+                <side>inside</side>
+                <ingress-interface>vlan100</ingress-interface>
+                <virtual-ip>10.100.100.220</virtual-ip>
+                <virtual-ip-mask>255.255.255.0</virtual-ip-mask>
+                <buckets>4</buckets>
+              </sides>
+              <sides>
+                <side>outside</side>
+                <ingress-interface>vlan161</ingress-interface>
+                <virtual-ip>172.161.1.220</virtual-ip>
+                <virtual-ip-mask>255.255.255.0</virtual-ip-mask>
+                <buckets>4</buckets>
+              </sides>
+            </cisco-intelligent-traffic-director>
+          </load-balance>
+        </scaling>
+      </vnf-deployment>
+  </site>
+  </vnf-manager>
+</config>

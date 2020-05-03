@@ -1,0 +1,50 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <device>
+    <name>kansas</name>
+    <address>172.26.48.17</address>
+    <port>22</port>
+    <ssh>
+      <host-key>
+        <algorithm>ssh-rsa</algorithm>
+        <key-data>AAAAB3NzaC1yc2EAAAADAQABAAAAgQCxyDeoqb+0BoCe0E8LWLq2uAclHVa++PoRfAyP65u1
+S1Dd8i7O40vQOy1K5FFXeUEBg1tkpTwfBNNsLGU+RZdPja9Aqa57G1uImV6K5/fFEUNvsKAv
+mT0LK/GvaAe7hw0hbdIFOEoTPlU5MKiRiTgzdKqe0o+gYqy6hljE2ru5NQ==</key-data>
+      </host-key>
+    </ssh>
+    <authgroup>nexus</authgroup>
+    <device-type>
+      <cli>
+        <ned-id xmlns:cisco-nx-id="http://tail-f.com/ned/cisco-nx-id">cisco-nx-cli-5.13:cisco-nx-cli-5.13</ned-id>
+        <protocol>ssh</protocol>
+      </cli>
+    </device-type>
+    <state>
+      <admin-state>unlocked</admin-state>
+    </state>
+  </device>
+  <device>
+    <name>oaklahoma</name>
+    <address>172.26.48.18</address>
+    <port>22</port>
+    <ssh>
+      <host-key>
+        <algorithm>ssh-rsa</algorithm>
+        <key-data>AAAAB3NzaC1yc2EAAAADAQABAAAAgQDPRz8IT7JbtXpinmCf/ELHvWT+hF/QppidRbRROcz6
+Uzv+mFKwpHPpLrcNtgN0oooXTmht9+UiwQDrQn4CK8zIBgKm4g0lOVmsIgEd16SP3sza6nAW
+o+w7QxTa4ynpr+3meyZHLYxNgDjfk7eNpZRwVGqDrIX1kpw5e45Np2ojsw==</key-data>
+      </host-key>
+    </ssh>
+    <authgroup>nexus</authgroup>
+    <device-type>
+      <cli>
+        <ned-id xmlns:cisco-nx-id="http://tail-f.com/ned/cisco-nx-id">cisco-nx-cli-5.13:cisco-nx-cli-5.13</ned-id>
+        <protocol>ssh</protocol>
+      </cli>
+    </device-type>
+    <state>
+      <admin-state>unlocked</admin-state>
+    </state>
+  </device>
+  </devices>
+</config>

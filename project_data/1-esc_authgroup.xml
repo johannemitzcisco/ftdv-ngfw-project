@@ -1,0 +1,13 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <authgroups>
+  <group>
+    <name>esc</name>
+    <default-map>
+      <remote-name>admin</remote-name>
+      <remote-password>$8$taIM6jyuLXfqCCqq/YYXE8a272E4aYIrHEoARmSmrDU=</remote-password>
+    </default-map>
+  </group>
+  </authgroups>
+  </devices>
+</config>

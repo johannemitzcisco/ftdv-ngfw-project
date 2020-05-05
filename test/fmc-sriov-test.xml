@@ -1,6 +1,6 @@
 <vnf-manager xmlns="http://example.com/ftdv-ngfw">
   <site>
-    <name>bofa-ngfw</name>
+    <name>sriov</name>
     <vnf-deployment>
       <tenant>admin</tenant>
       <deployment-name>FMC-FTD-SMALL-DEPLOYMENT-SRIOV</deployment-name>
@@ -16,6 +16,7 @@
         <networks>
           <network>
             <name>Inside-SRIOV</name>
+            <catalog-descriptor-vdu-id>Inside</catalog-descriptor-vdu-id>
             <ftd-interface>
               <inside/>
             </ftd-interface>
@@ -23,6 +24,11 @@
           </network>
           <network>
             <name>Management</name>
+            <catalog-descriptor-vdu-id>Management</catalog-descriptor-vdu-id>
+          </network>
+          <network>
+            <name>Outside</name>
+            <catalog-descriptor-vdu-id>Outside</catalog-descriptor-vdu-id>
           </network>
           <network>
             <name>Outside-SRIOV</name>

@@ -9,7 +9,7 @@
     </default-map>
   </group>
   <group>
-    <name>ftd_day0</name>
+    <name>ftd-day0</name>
     <default-map>
       <remote-name>admin</remote-name>
       <remote-password>Admin123</remote-password>

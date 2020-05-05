@@ -51,6 +51,14 @@
         <ftd-network/>
       </network>
       <network>
+        <name>Inside-Servers-Perf</name>
+        <network>192.168.1.0</network>
+        <netmask>255.255.255.0</netmask>
+        <prefix>24</prefix>
+        <gateway-ip-address>172.16.2.1</gateway-ip-address>
+        <ftd-network/>
+      </network>
+      <network>
         <name>Management</name>
         <network>172.26.32.192</network>
         <netmask>255.255.255.192</netmask>
@@ -91,6 +99,14 @@
         <prefix>24</prefix>
         <gateway-ip-address>172.16.1.1</gateway-ip-address>
         <vlan-id>162</vlan-id>
+        <ftd-network/>
+      </network>
+      <network>
+        <name>Outside-Clients-Perf</name>
+        <network>10.1.1.0</network>
+        <netmask>255.255.255.0</netmask>
+        <prefix>24</prefix>
+        <gateway-ip-address>172.16.1.1</gateway-ip-address>
         <ftd-network/>
       </network>
       <network>
